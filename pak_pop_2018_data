@@ -1,0 +1,26 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Data from FAO website
+data=pd.read_csv("u_r_2018.csv")
+
+# ISt way to plot
+label1=data.Year
+sizes=["Value"]
+plt.pie(autopct='%1.1f%%',data=data,x="Value",labels=labels,startangle=90)
+plt.axis('equal')
+plt.legend()
+plt.show()
+
+# 2and way to plot
+Element=data.Element
+Element
+Values=data.Value
+Values
+labels=Element
+sizes=Values
+plt.pie(sizes,autopct='%1.1f%%',labels=labels,startangle=90)
+plt.legend()
+
+plt.title("pakistan population in 2018")
