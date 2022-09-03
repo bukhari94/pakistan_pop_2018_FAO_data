@@ -6,7 +6,7 @@ import seaborn as sns
 data=pd.read_csv("u_r_2018.csv")
 
 # ISt way to plot
-label1=data.Year
+labels=data.Year
 sizes=["Value"]
 plt.pie(autopct='%1.1f%%',data=data,x="Value",labels=labels,startangle=90)
 plt.axis('equal')
